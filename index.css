@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  background-color: hsl(216, 14%, 14%);
+  color: white;
+  font-family: "Source Sans Pro", sans-serif;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#preloader {
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  background-color: black;
+  flex-direction: column;
+}
+#percent {
+  color: white;
+  font-size: 5rem;
+}
+#bar {
+  width: 60%;
+  margin-top: 20px;
+}
+#barconfrm {
+  width: 1%;
+  padding: 1px 0px;
+  background-color: white;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-end;
+}
+path.path {
+  stroke: white;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+}
+.content img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
+  margin-bottom: 2rem;
+}
+.content #name {
+  font-size: 1.5rem;
+}
+.content p {
+  margin-top: 1em;
+  line-height: 1.9rem;
+}
+.content button {
+  margin-top: 1em;
+  background-color: hsl(211, 19%, 70%);
+  border: 0;
+  width: 10rem;
+  height: 3rem;
+  border-radius: 1.5rem;
+  color: hsl(216, 14%, 14%);
+  text-transform: capitalize;
+}
+.desktop {
+  
+}
+.desktop .details {
+  width: 45rem;
+  position: relative;
+  height: 100vh;
+  padding: 5rem;
+}
+.desktop .details h3 {
+  color: orange;
+}
+.desktop .details h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  position: relative;
+  overflow: hidden;
+  text-transform: capitalize;
+}
+.desktop .details h1::after {
+  position: absolute;
+  content: "hello my name is kehinde";
+  font-size: 5rem;
+  font-weight: 700;
+  color: orange;
+  top: 0;
+  left: 0;
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  transition-property: all;
+  transition-duration: 0.3s;
+}
+.desktop .details h1:hover::after {
+  clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+}
+.desktop .details p {
+  font-size: 1.2em;
+}
+.desktop .picture img{
+    width: 25rem;
+    height: 25rem;
+    border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
+    opacity: 1;
+}
+.desktop button{
+    margin-top: 1em;
+  background-color: hsl(211, 19%, 70%);
+  border: 0;
+  width: 10rem;
+  height: 3rem;
+  border-radius: 1.5rem;
+  color: hsl(216, 14%, 14%);
+  text-transform: capitalize;  
+}

@@ -5,77 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="base.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <style>
-      body {
-      }
-      * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-      }
-      .container {
-        height: 300px;
-        width: 100%;
-        display: flex;
-        gap: 20px;
-        align-items: center;
-        padding: 0 20px;
-      }
-      .item {
-        width: 200px;
-        height: 200px;
-        background-color: yellow;
-      }
-      .item1 {
-        margin-bottom: 100px;
-      }
-      section {
-        height: 100vh;
-      }
-      .one {
-        background-color: red;
-        padding: 10em;
-      }
-      .two {
-        background-color: yellow;
-        padding: 10em;
-      }
-      .twoo {
-        /* transform: translateX(0); */
-        /* font-size: 5rem; */
-      }
-      .eee {
-        transform: translateX(900px);
-      }
-
-      #preloader {
-        position: fixed;
-        display: flex;
-        top:0;
-        left: 0;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 100vh;
-        z-index: 100;
-        background-color: #0f0f0f;
-        flex-direction: column;
-      }
-      #percent {
-        color: white;
-        font-family: "Neutral Face";
-      }
-      #bar {
-        width: 60%;
-        margin-top: 20px;
-      }
-      #barconfrm {
-        width: 1%;
-        padding: 1px 0px;
-        background-color: white;
-      }
-    </style>
+    <link href="/dist/output.css" rel="stylesheet" />
   </head>
   <body onload="move()">
     <div id="preloader">
@@ -84,27 +22,92 @@
         <div id="barconfrm"></div>
       </div>
     </div>
-    <div data-scroll-container>
-      <section data-scroll-section class="one">
-        <h1 data-scroll>Hey</h1>
-        <p data-scroll>👋</p>
-      </section>
-      <section data-scroll-section class="two">
-        <h2
-          data-scroll
-          data-scroll-speed="5"
-          class="twoo"
-          data-scroll-class="eee"
-          data-scroll-repeat="true"
-          data-scroll-direction="horizontal"
-        >
-          What's up?
-        </h2>
-        <p data-scroll data-scroll-speed="2">😬</p>
-      </section>
-    </div>
+
+    <main>
+      <div class="lg:hidden">
+        <nav class="nav p-8">
+          <svg
+            class="toggle-menu"
+            width="24"
+            height="24"
+            viewBox="0 0 48 48"
+            fill="none"
+          >
+            <path
+              class="path"
+              d="M8 28a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 12a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM8 40a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
+              stroke-width="3"
+              stroke-linejoin="round"
+            ></path>
+            <path
+              d="M20 24h24M20 38h24M20 10h24"
+              class="path"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
+        </nav>
+        <section class="content px-8">
+          <img src="/avatar.png" />
+          <h1 id="name" class="font-bold">Hi, I'm kehinde 😎</h1>
+          <p class="text-center font-light capitalize">
+            an astute software engineer with an excellent urge for efficiency
+            and end-user satisfaction.
+          </p>
+          <button>explore</button>
+        </section>
+      </div>
+
+      <div class="lg:block hidden desktop h-screen">
+        <div class="flex flex-row justify-between">
+          <div class="details fixed flex flex-col justify-between">
+            <div class="about">
+              <h3 class="uppercase font-semibold">frontend engineer</h3>
+            <h1>hello my name is kehinde</h1>
+            <p class="font-light capitalize">
+              an astute software engineer with an excellent urge for efficiency
+              and end-user satisfaction.
+            </p>
+            </div>
+            <div class="social flex flex-row justify-between w-80 mt-5">
+              <p><a href=""> <i class="devicon-github-original-wordmark"></i> GitHub</a></p>
+              <p><a href=""> <i class="devicon-linkedin-plain"></i>LinkedIn</a></p>
+              <p><a href="">Mail</a></p>
+            </div>
+          </div>
+          <div class="project">
+           
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
 <script src="locomotive-scroll.min.js"></script>
 <script src="index.js"></script>
+
+<!-- <div data-scroll-container>
+  <section data-scroll-section class="one">
+    <h1 class="text-3xl font-bold underline">
+      Hello world!
+    </h1>
+    <h1 data-scroll id="text">bankole</h1>
+    <p data-scroll>👋</p>
+  </section>
+  <section data-scroll-section class="two">
+    <h2
+      data-scroll
+      data-scroll-speed="5"
+      class="twoo"
+      data-scroll-class="eee"
+      data-scroll-repeat="true"
+      data-scroll-direction="horizontal"
+      class="sd"
+    >
+      What's up?
+    </h2>
+    <p data-scroll data-scroll-speed="2">😬</p>
+  </section>
+</div> -->
